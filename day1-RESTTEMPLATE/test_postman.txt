@@ -1,0 +1,39 @@
+POST: localhost:8888/api/departments
+
+{
+    "departmentName":"IT",
+    "departmentDescription":"Information Technology",
+    "departmentCode":"IT001"
+}
+
+-----------------------------------------------------
+
+POST: localhost:9999/api/employees
+
+{
+    "firstName":"igloo",
+    "lastName":"gandu",
+    "email":"igloo.gandu@gmail.com",
+    "departmentCode":"IT001"
+}
+
+-----------------------------------------------------
+
+GET: localhost:9999/api/employees/1
+
+Output:- 200 OK
+{
+    "employeeDto": {
+        "id": 1,
+        "firstName": "igloo",
+        "lastName": "gandu",
+        "email": "igloo.gandu@gmail.com",
+        "departmentCode": "IT001"
+    },
+    "departmentDto": {
+        "id": 1,
+        "departmentName": "IT",
+        "departmentDescription": "Information Technology",
+        "departmentCode": "IT001"
+    }
+}
