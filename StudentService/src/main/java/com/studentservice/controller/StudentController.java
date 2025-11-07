@@ -25,8 +25,7 @@ public class StudentController {
 
     @GetMapping("/{id}")
     public Student getById(@PathVariable Long id) {
-        return
-                svc.getById(id);
+        return svc.getById(id);
     }
 
     @PostMapping

@@ -15,7 +15,8 @@ import lombok.*;
 @Builder
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_seq_gen")
+    @SequenceGenerator(name = "student_seq_gen", sequenceName = "student_seq", allocationSize = 1)
     private Long id;
     @NotBlank(message = "firstName required")
     private String firstName;
