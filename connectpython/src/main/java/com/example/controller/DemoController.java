@@ -17,8 +17,8 @@ public class DemoController {
     private RestTemplate restTemplate;
 
     //public final static String URL = "http://localhost:7676/python";
-    public final static String URL = "http://192.168.0.11:7676/python";
-    public final static String BookUrl = "http://192.168.0.11:7676/books";
+    public final static String URL = "http://localhost:7676/python";
+    public final static String BookUrl = "http://localhost:7676/books";
 
     @GetMapping("/api")
     public String testing(){
